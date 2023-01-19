@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/19 11:04:40 by marcrodr         ###   ########.fr       */
+/*   Created: 2023/01/19 10:59:54 by marcrodr          #+#    #+#             */
+/*   Updated: 2023/01/19 11:02:19 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-int	main(int argc, char **argv)
+int	check_args(int argc)
 {
-	printf("argc: %d\nargv: %s\n", argc, argv[1]);
-	if (check_args(argc))
-		return (1);	
+	if (argc < 5 || argc > 6)
+	{
+		printf("ERROR: Wrong number of params.\n");
+		return (1);		
+	}		
 	return (0);
 }

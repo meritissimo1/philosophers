@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/19 10:30:25 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/19 11:03:07 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,11 @@
 # define PHILO_H
 
 # include <stdio.h>
+
+/*********
+** PARSING
+**********/
+int	check_args(int argc);
+
 
 #endif 

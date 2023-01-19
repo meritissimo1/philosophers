@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/19 10:38:35 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/01/19 11:06:46 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,11 @@ INC_FLAGS	= -I $(INCS_DIR)
 SRCS_DIR	= ./src
 MAIN_SRC	= main.c
 
-SRCS		=	$(MAIN_SRC)
+UTILS_DIR	= utils
+UTILS_SRC	= parser.c
+
+SRCS		=	$(MAIN_SRC) \
+				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC))
 
 SRCS_PATH	= $(addprefix $(SRCS_DIR)/, $(MAIN_SRC))
 

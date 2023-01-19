@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/18 19:10:34 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/01/19 10:38:35 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,8 @@ SRCS_DIR	= ./src
 MAIN_SRC	= main.c
 
 SRCS		=	$(MAIN_SRC)
+
+SRCS_PATH	= $(addprefix $(SRCS_DIR)/, $(MAIN_SRC))
 
 OBJS_DIR	= ./objs
 OBJS		= $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
@@ -51,7 +53,8 @@ fclean: clean
 re: fclean all
 
 debug:
-	$(CC) -g $(CFLAGS) -pthread $(INC_FLAGS) -o $@
-	gdb --tui ./$@
+	$(CC) -g $(CFLAGS) -pthread $(INC_FLAGS) $(SRCS_PATH) -o $@
+	gdb --tui --args ./$@ joaquim
+	$(RM) debug
 
 .PHONY: re fclean clean all

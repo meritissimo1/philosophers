@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/19 11:06:46 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/01/20 17:03:35 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS_DIR	= ./src
 MAIN_SRC	= main.c
 
 UTILS_DIR	= utils
-UTILS_SRC	= parser.c
+UTILS_SRC	= check_args.c
 
 SRCS		=	$(MAIN_SRC) \
 				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC))

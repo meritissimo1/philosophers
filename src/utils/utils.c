@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:54:56 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/20 16:57:20 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:02:34 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,30 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (signal * result);
+}
+
+long long int	ft_itoll(char *str)
+{
+	int				i;
+    int				count;
+	long long int	is_negative;
+	long long int	result;
+
+	i = 0;
+	is_negative = 1;
+	result = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			is_negative = -1;
+		i++;
+	}
+	while ((str[i] != '\0') && (str[i] >= 48) && (str[i] <= 57))
+	{
+		result = (result * 10) + (str[i] - '0');
+		i++;
+	}
+	return (is_negative * result);
 }

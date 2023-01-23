@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 16:54:56 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/23 16:02:34 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/23 16:40:13 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,14 @@
 int	ft_isdigit(int arg)
 {
 	return (arg >= '0' && arg <= '9');
+}
+
+int	ft_isspace(char c)
+{
+	if (c == ' ' || c == '\n' || c == '\r' || c == '\t'
+		|| c == '\v' || c == '\f')
+		return (1);
+	return (0);
 }
 
 int	ft_atoi(const char *str)
@@ -49,7 +57,6 @@ int	ft_atoi(const char *str)
 long long int	ft_itoll(char *str)
 {
 	int				i;
-    int				count;
 	long long int	is_negative;
 	long long int	result;
 

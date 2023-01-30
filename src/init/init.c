@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 15:33:11 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/30 16:58:36 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,12 @@ void	init_struct(t_param *param, t_philo *philo)
 	param->start_time = 0;	
 }
 
+void	init_forks(pthread_mutex_t **forks, int philos)
+{
+	int i;
+
+	*forks = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * philos);
+	i = -1;
+	while ( ++i < philos)
+		pthread_mutex_init(&(*forks)[i], NULL);
+}

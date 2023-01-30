@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 15:54:22 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/30 17:01:13 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ int				ft_isdigit(int arg);
 ** INIT
 **********/
 void	init_struct(t_param *param, t_philo *philo);
+void	init_forks(pthread_mutex_t **forks, int philos);
 
 /*********
 ** PARSE

@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 15:35:08 by marcrodr         ###   ########.fr       */
+/*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
+/*   Updated: 2023/01/30 15:33:11 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-int	main(int argc, char **argv)
+void	init_struct(t_param *param, t_philo *philo)
 {
-	t_param param;
-	t_philo	*philo;
-
-	if (validate_args(argc) || check_args(argc, argv))
-		return (1);
-	philo = malloc(sizeof(t_philo) * ft_atoi(argv[1]));
-	init_struct(&param, philo);	
-	return (0);
+	philo->name = 0;
+	philo->meals = 0;
+	philo->last_meal = 0;
+	philo->satisfied = false;
+	philo->time_eaten = 0;
+	param->is_dead = 0;
+	param->philo_nbr = 0;
+	param->time2die = 0;
+	param->time2eat = 0;
+	param->time2sleep = 0;
+	param->meals_nbr = 0;
+	param->start_time = 0;	
 }
+

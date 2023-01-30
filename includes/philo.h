@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 12:34:43 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/30 15:29:10 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,10 @@ int				ft_atoi(const char *str);
 int				validate_args(int argc);
 int				ft_isdigit(int arg);
 
+/*********
+** INIT
+**********/
+void	init_struct(t_param *param, t_philo *philo);
 
 
 #endif 

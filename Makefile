@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/30 12:11:27 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/01/30 15:31:32 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,11 +27,17 @@ INC_FLAGS	= -I $(INCS_DIR)
 SRCS_DIR	= ./src
 MAIN_SRC	= main.c
 
+## Utils
 UTILS_DIR	= utils
 UTILS_SRC	= check_args.c utils.c
 
+## Init
+INIT_DIR	= init
+INIT_SRC	= init.c
+
 SRCS		=	$(MAIN_SRC) \
-				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC))
+				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC)) \
+				$(addprefix $(INIT_DIR)/, $(INIT_SRC))
 
 SRCS_PATH	= $(addprefix $(SRCS_DIR)/, $(SRCS))
 

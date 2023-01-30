@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:59:54 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 11:15:45 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/30 12:12:57 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	check_args(int argc, char **argv)
 {
 	int	i;
 
-	i = 0;
+	i = 1;
 	while ( i < argc)
 	{
 		if (ft_itoll(argv[i]) > INT_MAX)

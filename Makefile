@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/30 15:31:32 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/01/30 15:50:51 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,13 @@ UTILS_SRC	= check_args.c utils.c
 INIT_DIR	= init
 INIT_SRC	= init.c
 
+PARSER_DIR	= parse
+PARSER_SRC	= parser.c
+
 SRCS		=	$(MAIN_SRC) \
 				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC)) \
-				$(addprefix $(INIT_DIR)/, $(INIT_SRC))
+				$(addprefix $(INIT_DIR)/, $(INIT_SRC)) \
+				$(addprefix $(PARSER_DIR)/, $(PARSER_SRC))
 
 SRCS_PATH	= $(addprefix $(SRCS_DIR)/, $(SRCS))
 

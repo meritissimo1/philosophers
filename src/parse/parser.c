@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:39:48 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 15:52:34 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/30 16:02:42 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,7 @@ void	parser(char **argv, t_param *param, pthread_mutex_t **fork)
 	param->death = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * 1);
 	param->text = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * 1);
 	param->who = (pthread_mutex_t *)malloc(sizeof(pthread_mutex_t) * 1);
+	pthread_mutex_init(param->death, NULL);
+	pthread_mutex_init(param->text, NULL);
+	pthread_mutex_init(param->who, NULL);
 }

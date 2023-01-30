@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:59:54 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/23 16:45:30 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/30 11:15:45 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,23 @@ int	validate_args(int argc)
 
 static int	check_more_args(char **argv, int i)
 {
+	long int	aux;
+
+	aux = 0;
 	if (!ft_isdigit(*argv[i]))
 	{
-		printf("Error: arguments must be integers.\n");
+		printf("Error: arguments must be all digits.\n");
 		return (1);
 	}
 	else if (ft_atoi(argv[i]) == 0)
 	{
 		printf("Error: invalid %d° argument, can't be zero -> %s.\n", i, argv[i]);
+		return (1);
+	}
+	aux = ft_atoi(argv[i]);
+	if (!aux)
+	{
+		printf("Error: arguments must be integers.\n");
 		return (1);
 	}
 	return (0);

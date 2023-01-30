@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/30 15:50:51 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/01/30 15:55:44 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,5 +70,8 @@ debug:
 	$(CC) -g $(CFLAGS) -pthread $(INC_FLAGS) $(SRCS_PATH) -o $@
 	gdb --tui --args ./$@ 100 1 4 2
 	$(RM) debug
+
+git: fclean
+	git status
 
 .PHONY: re fclean clean all

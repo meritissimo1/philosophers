@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/30 16:28:04 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/01/31 10:34:02 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,7 @@ MAIN_SRC	= main.c
 
 ## Utils
 UTILS_DIR	= utils
-UTILS_SRC	= check_args.c utils.c
+UTILS_SRC	= check_args.c utils.c time.c
 
 ## Init
 INIT_DIR	= init
@@ -68,7 +68,7 @@ re: fclean all
 
 debug:
 	$(CC) -g $(CFLAGS) -pthread $(INC_FLAGS) $(SRCS_PATH) -o $@
-	gdb --tui --args ./$@ 100 1 4 2
+	gdb --tui --args ./$@ 1 1 4 2
 	$(RM) debug
 
 git: fclean

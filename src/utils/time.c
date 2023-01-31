@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   time.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/19 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/31 10:14:33 by marcrodr         ###   ########.fr       */
+/*   Created: 2023/01/31 10:25:49 by marcrodr          #+#    #+#             */
+/*   Updated: 2023/01/31 10:31:59 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-int	main(int argc, char **argv)
+long int	time_converte(void)
 {
-	t_param 		param;
-	t_philo			*philo;
-	pthread_mutex_t	*forks;
+	struct timeval	time;
 
-	if (validate_args(argc) || check_args(argc, argv))
-		return (1);
-	philo = malloc(sizeof(t_philo) * ft_atoi(argv[1]));
-	init_struct(&param, philo);
-	parser(argv, &param, &forks);
-	init_forks(&forks, param.philo_nbr);
-	init_philosophers(philo, &param, &forks, param.philo_nbr);
-	return (0);
+	gettimeofday(&time, NULL);
+	return ((time.tv_sec * 1000) + (time.tv_usec / 1000));	
 }

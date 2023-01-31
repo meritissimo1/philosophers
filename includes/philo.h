@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 17:01:13 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/31 10:32:49 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <stdbool.h>
 # include <pthread.h>
+# include <sys/time.h>	
 
 typedef struct s_param
 {
@@ -55,6 +56,7 @@ long long int	ft_itoll(char *str);
 int				ft_atoi(const char *str);
 int				validate_args(int argc);
 int				ft_isdigit(int arg);
+long int		time_converte(void);
 
 /*********
 ** INIT

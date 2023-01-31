@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/31 10:33:01 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/31 10:50:08 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	init_forks(pthread_mutex_t **forks, int philos)
 void	init_philosophers(t_philo *philo, t_param *param,
 		pthread_mutex_t **forks, int qqt_philo)
 {
-	pthread_t	waiter;
+	//pthread_t	waiter;
 	int			i;
 
 	i = -1;

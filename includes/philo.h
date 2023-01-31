@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/31 10:32:49 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/01/31 10:49:48 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,8 @@ long int		time_converte(void);
 **********/
 void	init_struct(t_param *param, t_philo *philo);
 void	init_forks(pthread_mutex_t **forks, int philos);
+void	init_philosophers(t_philo *philo, t_param *param,
+		pthread_mutex_t **forks, int qqt_philo);
 
 /*********
 ** PARSE

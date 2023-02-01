@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/01/31 10:34:02 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/02/01 17:43:43 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,7 @@ clean:
 fclean: clean
 	$(RM) $(NAME) debug
 	
-re: fclean all
+re: fclean all 
 
 debug:
 	$(CC) -g $(CFLAGS) -pthread $(INC_FLAGS) $(SRCS_PATH) -o $@

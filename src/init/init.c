@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/31 10:50:08 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/01 17:10:21 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,19 @@ void	init_forks(pthread_mutex_t **forks, int philos)
 		pthread_mutex_init(&(*forks)[i], NULL);
 }
 
+static void *dinner(void *arg)
+{
+	t_philo	*philo_n;
+
+	philo_n = (t_philo *)arg;
+	pthread_mutex_lock(philo_n->mutex_meals);
+	philo_n->last_meal = philo_n->param->start_time;
+	pthread_mutex_unlock(philo_n->mutex_meals);
+	if (philo_n->param->philo_nbr == 1)
+		printf ("one philo\n");
+	return (NULL);
+}
+
 void	init_philosophers(t_philo *philo, t_param *param,
 		pthread_mutex_t **forks, int qqt_philo)
 {
@@ -58,5 +71,7 @@ void	init_philosophers(t_philo *philo, t_param *param,
 	philo[i - 1].left_fork = &(*forks)[0];
 	i = -1;
 	param->start_time = time_converte();
+	while (++i < qqt_philo)
+		pthread_create(&philo[i].philo_thread, NULL, &dinner, (void *)&philo[i]);
 	
 }

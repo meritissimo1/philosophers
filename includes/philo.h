@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 11:01:58 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 11:29:16 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@
 # include <stdlib.h>
 # include <stdbool.h>
 # include <pthread.h>
-# include <sys/time.h>	
+# include <sys/time.h>
+# include <unistd.h>
 
 typedef struct s_param
 {
@@ -57,24 +58,25 @@ int				ft_atoi(const char *str);
 int				validate_args(int argc);
 int				ft_isdigit(int arg);
 long int		time_converte(void);
+long int		time_calculator(long int time);
 
 /*********
 ** INIT
 **********/
-void	init_struct(t_param *param, t_philo *philo);
-void	init_forks(pthread_mutex_t **forks, int philos);
-void	init_philosophers(t_philo *philo, t_param *param,
+void			init_struct(t_param *param, t_philo *philo);
+void			init_forks(pthread_mutex_t **forks, int philos);
+void			init_philosophers(t_philo *philo, t_param *param,
 		pthread_mutex_t **forks, int qqt_philo);
 
 /*********
 ** PARSE
 **********/
-void	parser(char **argv, t_param *param, pthread_mutex_t **fork);
+void			parser(char **argv, t_param *param, pthread_mutex_t **fork);
 
 /*********
 ** ACTIONS
 **********/
-void *dinner(void *arg);
+void			*dinner(void *arg);
 
 
 

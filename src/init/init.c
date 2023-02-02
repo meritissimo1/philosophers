@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 14:32:42 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 14:53:33 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,8 @@ void	init_philosophers(t_philo *philo, t_param *param,
 	while (++i < qqt_philo)
 		pthread_create(&philo[i].philo_thread, NULL, &dinner, (void *)&philo[i]);
 	pthread_create(&waiter, NULL, &end_dinner, philo);
+	i = -1;
+	while (++i < qqt_philo)
+		pthread_join(philo[i].philo_thread, NULL);
+	pthread_join(waiter, NULL);
 }

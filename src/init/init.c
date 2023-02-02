@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/01 17:10:21 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 11:00:32 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,6 @@ void	init_forks(pthread_mutex_t **forks, int philos)
 	i = -1;
 	while ( ++i < philos)
 		pthread_mutex_init(&(*forks)[i], NULL);
-}
-
-static void *dinner(void *arg)
-{
-	t_philo	*philo_n;
-
-	philo_n = (t_philo *)arg;
-	pthread_mutex_lock(philo_n->mutex_meals);
-	philo_n->last_meal = philo_n->param->start_time;
-	pthread_mutex_unlock(philo_n->mutex_meals);
-	if (philo_n->param->philo_nbr == 1)
-		printf ("one philo\n");
-	return (NULL);
 }
 
 void	init_philosophers(t_philo *philo, t_param *param,

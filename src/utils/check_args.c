@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:59:54 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/30 12:12:57 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 11:06:25 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static int	check_more_args(char **argv, int i)
 	}
 	else if (ft_atoi(argv[i]) == 0)
 	{
-		printf("Error: invalid %d° argument, can't be zero -> %s.\n", i, argv[i]);
+		printf("Error: invalid %d° argument, can't be zero.\n", i);
 		return (1);
 	}
 	aux = ft_atoi(argv[i]);

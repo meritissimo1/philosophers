@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/02/01 17:43:43 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/02/02 11:01:31 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,10 +38,14 @@ INIT_SRC	= init.c
 PARSER_DIR	= parse
 PARSER_SRC	= parser.c
 
+ACTION_DIR	= actions
+ACTION_SRC	= dinner.c
+
 SRCS		=	$(MAIN_SRC) \
 				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC)) \
 				$(addprefix $(INIT_DIR)/, $(INIT_SRC)) \
-				$(addprefix $(PARSER_DIR)/, $(PARSER_SRC))
+				$(addprefix $(PARSER_DIR)/, $(PARSER_SRC)) \
+				$(addprefix $(ACTION_DIR)/, $(ACTION_SRC))
 
 SRCS_PATH	= $(addprefix $(SRCS_DIR)/, $(SRCS))
 

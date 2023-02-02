@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/01/31 10:49:48 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 11:01:58 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,12 @@ void	init_philosophers(t_philo *philo, t_param *param,
 ** PARSE
 **********/
 void	parser(char **argv, t_param *param, pthread_mutex_t **fork);
+
+/*********
+** ACTIONS
+**********/
+void *dinner(void *arg);
+
 
 
 #endif 

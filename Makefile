@@ -6,52 +6,59 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/02/02 14:48:19 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/02/02 16:23:45 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= philo
-CC			= gcc
-RM			= rm -rf
-CFLAGS		= -Wall -Wextra -Werror
+NAME		= 	philo
+CC			= 	gcc
+RM			= 	rm -rf
+CFLAGS		= 	-Wall -Wextra -Werror
 
 ## Main Header
-INCS		= philo.h
-INCS_DIR	= includes
-MAIN_HEADER	= $(addprefix $(INCS_DIR)/, $(INCS))
+INCS		= 	philo.h
+INCS_DIR	= 	includes
+MAIN_HEADER	= 	$(addprefix $(INCS_DIR)/, $(INCS))
 
 ##includes
-INC_FLAGS	= -I $(INCS_DIR)
+INC_FLAGS	= 	-I $(INCS_DIR)
 
 ## Source Code
-SRCS_DIR	= ./src
-MAIN_SRC	= main.c
+SRCS_DIR	= 	./src
+MAIN_SRC	= 	main.c
 
 ## Utils
-UTILS_DIR	= utils
-UTILS_SRC	= check_args.c utils.c time.c
+UTILS_DIR	= 	utils
+UTILS_SRC	= 	check_args.c utils.c time.c
 
 ## Init
-INIT_DIR	= init
-INIT_SRC	= init.c
+INIT_DIR	= 	init
+INIT_SRC	= 	init.c
 
-PARSER_DIR	= parse
-PARSER_SRC	= parser.c
+## Parse
+PARSER_DIR	= 	parse
+PARSER_SRC	= 	parser.c
 
-ACTION_DIR	= actions
-ACTION_SRC	= dinner.c action.c
+## Actions
+ACTION_DIR	= 	actions
+ACTION_SRC	= 	dinner.c action.c
+
+## Routine
+ROUTINE_DIR	= 	routine
+ROUTINE_SRC	=	routine.c eating.c
 
 SRCS		=	$(MAIN_SRC) \
 				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC)) \
 				$(addprefix $(INIT_DIR)/, $(INIT_SRC)) \
 				$(addprefix $(PARSER_DIR)/, $(PARSER_SRC)) \
-				$(addprefix $(ACTION_DIR)/, $(ACTION_SRC))
+				$(addprefix $(ACTION_DIR)/, $(ACTION_SRC)) \
+				$(addprefix $(ROUTINE_DIR)/, $(ROUTINE_SRC))
 
-SRCS_PATH	= $(addprefix $(SRCS_DIR)/, $(SRCS))
+SRCS_PATH	= 	$(addprefix $(SRCS_DIR)/, $(SRCS))
 
-OBJS_DIR	= ./objs
-OBJS		= $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
-DIR_OBJS	= mkdir -p $(@D)
+OBJS_DIR	= 	./objs
+OBJS		=	 $(addprefix $(OBJS_DIR)/, $(SRCS:.c=.o))
+DIR_OBJS	= 	mkdir -p $(@D)
 
 $(OBJS_DIR)/%.o: $(SRCS_DIR)/%.c
 	$(DIR_OBJS)

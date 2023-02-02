@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 11:55:58 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 12:01:57 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:13:51 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,29 @@ void	print_death(t_philo *philo)
 	philo->params->is_dead = philo->name;
 	pthread_mutex_unlock(philo->params->who);
 	print_action(philo, DIE);
+}
+
+int	dinner_finish(t_philo *philo)
+{
+	if (who_died(philo) != 0)
+	{
+		pthread_mutex_unlock(philo->right_fork);
+		pthread_mutex_unlock(philo->left_fork);
+		return (1);
+	}
+	return (0);
+}
+
+void	meals(t_philo *philo)
+{
+	pthread_mutex_lock(philo->mutex_meals);
+	philo->last_meal = time_converte();
+	philo->meals++;
+	if (philo->params->meals_nbr != 0)
+	{
+		if (philo->meals == philo->params->meals_nbr
+			&& philo->satisfied == false)
+			philo->satisfied = true;
+	}
+	pthread_mutex_unlock(philo->mutex_meals);
 }

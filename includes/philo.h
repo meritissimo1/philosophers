@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 14:57:36 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 16:24:35 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int				death_time(t_philo *philo);
 
 
 /*********
-** INIT
+* INIT
 **********/
 void			init_struct(t_param *param, t_philo *philo);
 void			init_forks(pthread_mutex_t **forks, int philos);
@@ -77,17 +77,24 @@ void			init_philosophers(t_philo *philo, t_param *param,
 		pthread_mutex_t **forks, int qqt_philo);
 
 /*********
-** PARSE
+* PARSE
 **********/
 void			parser(char **argv, t_param *param, pthread_mutex_t **fork);
 
 /*********
-** ACTIONS
+* ACTIONS
 **********/
 void			*dinner(void *arg);
 void			*end_dinner(void *phi);
 void			print_death(t_philo *philo);
 void			print_action(t_philo *philo, int action);
 int				who_died(t_philo *philo);
+int				dinner_finish(t_philo *philo);
+void			meals(t_philo *philo);
+
+/*********
+* ROUTINE
+**********/
+int				 eating(t_philo *philo);
 
 #endif 

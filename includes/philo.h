@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 11:29:16 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/02 14:40:49 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@
 # include <pthread.h>
 # include <sys/time.h>
 # include <unistd.h>
+
+# define FORK 2
+# define EAT 3
+# define SLEEP 4
+# define THINK 5
+# define DIE 6
 
 typedef struct s_param
 {
@@ -46,7 +52,7 @@ typedef struct s_philo
 	pthread_mutex_t	*right_fork;
 	pthread_mutex_t *mutex_meals;
 	pthread_t		philo_thread;
-	t_param			*param;
+	t_param			*params;
 }					t_philo;
 
 /*********
@@ -59,6 +65,8 @@ int				validate_args(int argc);
 int				ft_isdigit(int arg);
 long int		time_converte(void);
 long int		time_calculator(long int time);
+int				death_time(t_philo *philo);
+
 
 /*********
 ** INIT
@@ -77,7 +85,9 @@ void			parser(char **argv, t_param *param, pthread_mutex_t **fork);
 ** ACTIONS
 **********/
 void			*dinner(void *arg);
-
-
+void			*end_dinner(void *phi);
+void			print_death(t_philo *philo);
+void			print_action(t_philo *philo, int action);
+int				who_died(t_philo *philo);
 
 #endif 

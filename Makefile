@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/02/02 11:01:31 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/02/02 14:48:19 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ PARSER_DIR	= parse
 PARSER_SRC	= parser.c
 
 ACTION_DIR	= actions
-ACTION_SRC	= dinner.c
+ACTION_SRC	= dinner.c action.c
 
 SRCS		=	$(MAIN_SRC) \
 				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC)) \

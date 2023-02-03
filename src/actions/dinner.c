@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 11:00:35 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 16:25:49 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/03 16:27:37 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ void	*dinner(void *arg)
 	}
 	if (philo_n->name % 2 == 0)
 		usleep(1000);
+	while (!routine(philo_n))
+		continue ;
 	return (NULL);
 }
 

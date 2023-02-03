@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 16:24:35 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/03 16:11:41 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,5 +96,6 @@ void			meals(t_philo *philo);
 * ROUTINE
 **********/
 int				 eating(t_philo *philo);
+int				 sleeping(t_philo *philo);
 
 #endif 

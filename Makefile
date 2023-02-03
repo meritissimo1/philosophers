@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/02/02 16:29:44 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/02/03 16:18:54 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ ACTION_SRC	= 	dinner.c action.c
 
 ## Routine
 ROUTINE_DIR	= 	routine
-ROUTINE_SRC	=	routine.c eating.c
+ROUTINE_SRC	=	routine.c eating.c sleeping.c thinking.c
 
 SRCS		=	$(MAIN_SRC) \
 				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC)) \

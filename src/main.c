@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/01 15:06:28 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/03 16:37:35 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,7 @@ int	main(int argc, char **argv)
 		pthread_mutex_destroy(&forks[i]);
 		pthread_mutex_destroy(philo[i].mutex_meals);
 		free(philo[i].mutex_meals);
-		i++;		
+		i++;
 	}
-	
 	return (0);
 }

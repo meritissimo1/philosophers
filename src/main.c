@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/03 16:37:35 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/04 21:17:36 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@ int	main(int argc, char **argv)
 		free(philo[i].mutex_meals);
 		i++;
 	}
+	free_thread();
 	return (0);
 }

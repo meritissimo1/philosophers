@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/03 16:27:58 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/06 12:07:33 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,11 @@ int				routine(t_philo *philo);
 int				eating(t_philo *philo);
 int				sleeping(t_philo *philo);
 int				thinking(t_philo *philo);
+
+/*********
+* EXIT
+**********/
+void		free_thread(t_param param, t_philo *philo,
+			pthread_mutex_t *forks);
 
 #endif 

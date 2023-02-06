@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/02/03 16:18:54 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/02/06 12:07:04 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,12 +47,17 @@ ACTION_SRC	= 	dinner.c action.c
 ROUTINE_DIR	= 	routine
 ROUTINE_SRC	=	routine.c eating.c sleeping.c thinking.c
 
+## Exit
+EXIT_DIR	=	exit
+EXIT_SRC	=	exit.c
+
 SRCS		=	$(MAIN_SRC) \
 				$(addprefix $(UTILS_DIR)/, $(UTILS_SRC)) \
 				$(addprefix $(INIT_DIR)/, $(INIT_SRC)) \
 				$(addprefix $(PARSER_DIR)/, $(PARSER_SRC)) \
 				$(addprefix $(ACTION_DIR)/, $(ACTION_SRC)) \
-				$(addprefix $(ROUTINE_DIR)/, $(ROUTINE_SRC))
+				$(addprefix $(ROUTINE_DIR)/, $(ROUTINE_SRC)) \
+				$(addprefix $(EXIT_DIR)/, $(EXIT_SRC))
 
 SRCS_PATH	= 	$(addprefix $(SRCS_DIR)/, $(SRCS))
 

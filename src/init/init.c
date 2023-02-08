@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/06 11:45:39 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/08 11:13:16 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,19 @@ void	init_philosophers(t_philo *philo, t_param *param,
 	i = -1;
 	param->start_time = time_converte();
 	while (++i < qqt_philo)
+	{
 		pthread_create(&philo[i].philo_thread, NULL, &dinner,
 			(void *)&philo[i]);
+		printf("Thread %d has started \n", i);		
+	}
+		
 	pthread_create(&waiter, NULL, &end_dinner, philo);
 	i = -1;
 	while (++i < qqt_philo)
+	{
 		pthread_join(philo[i].philo_thread, NULL);
+		printf("thread %d has finished \n", i);
+	}
+		
 	pthread_join(waiter, NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/08 11:13:16 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/08 11:15:02 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,6 @@ void	init_philosophers(t_philo *philo, t_param *param,
 	{
 		pthread_join(philo[i].philo_thread, NULL);
 		printf("thread %d has finished \n", i);
-	}
-		
+	}		
 	pthread_join(waiter, NULL);
 }

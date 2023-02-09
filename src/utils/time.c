@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 14:39:52 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/08 17:13:33 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ int	time_of_death(long int death_time, long int last_meal)
 	long int	action_time;
 
 	action_time = time_converte();
+	
+	//printf("action_time %ld - %ld last_meal >= %ld death_time -> result %ld\n", action_time, last_meal, death_time, action_time - last_meal);
 	if (last_meal != 0)
 		if (action_time - last_meal >= death_time)
 			return (0);

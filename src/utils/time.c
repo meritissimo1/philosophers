@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/09 18:20:12 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/10 14:51:31 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ long int	time_calculator(long int time)
 	long int	act_time;
 
 	act_time = time_converte();
-	printf("time %ld - %ld act_time == %ld\n", time, act_time, act_time - time);
+	//printf("time %ld - %ld act_time == %ld\n", time, act_time, act_time - time);
 	return (act_time - time);
 }
 

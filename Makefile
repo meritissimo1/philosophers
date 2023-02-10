@@ -6,7 +6,7 @@
 #    By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/18 17:54:46 by marcrodr          #+#    #+#              #
-#    Updated: 2023/02/06 12:07:04 by marcrodr         ###   ########.fr        #
+#    Updated: 2023/02/10 14:52:34 by marcrodr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,7 +84,7 @@ re: fclean all
 
 debug:
 	$(CC) -g $(CFLAGS) -pthread $(INC_FLAGS) $(SRCS_PATH) -o $@
-	gdb --tui --args ./$@ 2 1 4 2
+	gdb --tui --args ./$@ 2 4 2 2 1
 	$(RM) debug
 
 git: fclean

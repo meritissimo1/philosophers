@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/13 15:42:44 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:34:56 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,20 @@ typedef struct s_param
 	long int		start_time;
 	int				is_dead;
 	pthread_mutex_t	*death;
-	pthread_mutex_t *text;
-	pthread_mutex_t *who;	
+	pthread_mutex_t	*text;
+	pthread_mutex_t	*who;
 }					t_param;
 
 typedef struct s_philo
 {
-    int				name;
+	int				name;
 	long int		last_meal;
 	int				meals;
 	bool			satisfied;
 	int				time_eaten;
 	pthread_mutex_t	*left_fork;
 	pthread_mutex_t	*right_fork;
-	pthread_mutex_t *mutex_meals;
+	pthread_mutex_t	*mutex_meals;
 	pthread_t		philo_thread;
 	t_param			*params;
 }					t_philo;
@@ -67,14 +67,13 @@ long int		time_converte(void);
 long int		time_calculator(long int time);
 int				death_time(t_philo *philo);
 
-
 /*********
 * INIT
 **********/
 void			init_struct(t_param *param, t_philo *philo);
 void			init_forks(pthread_mutex_t **forks, int philos);
 void			init_philosophers(t_philo *philo, t_param *param,
-		pthread_mutex_t **forks, int qqt_philo);
+					pthread_mutex_t **forks, int qqt_philo);
 
 /*********
 * PARSE
@@ -103,7 +102,7 @@ int				thinking(t_philo *philo);
 /*********
 * EXIT
 **********/
-void		free_thread(t_param param, t_philo *philo,
-			pthread_mutex_t *forks);
+void			free_thread(t_param param, t_philo *philo,
+					pthread_mutex_t *forks);
 
 #endif

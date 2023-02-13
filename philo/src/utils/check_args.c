@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:59:54 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/02 11:06:25 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:29:33 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	validate_args(int argc)
 	if (argc < 5 || argc > 6)
 	{
 		printf("ERROR: Wrong number of params.\n");
-		return (1);		
+		return (1);
 	}		
 	return (0);
 }
@@ -51,7 +51,7 @@ int	check_args(int argc, char **argv)
 	int	i;
 
 	i = 1;
-	while ( i < argc)
+	while (i < argc)
 	{
 		if (ft_itoll(argv[i]) > INT_MAX)
 		{

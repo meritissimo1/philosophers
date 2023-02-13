@@ -6,13 +6,13 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 15:57:38 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/03 16:16:29 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:28:59 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <philo.h>
 
-int eating(t_philo *philo)
+int	eating(t_philo *philo)
 {
 	pthread_mutex_lock(philo->right_fork);
 	pthread_mutex_lock(philo->left_fork);
@@ -29,5 +29,5 @@ int eating(t_philo *philo)
 	usleep(philo->params->time2eat * 1000);
 	pthread_mutex_unlock(philo->right_fork);
 	pthread_mutex_unlock(philo->left_fork);
-	return (0);    
+	return (0);
 }

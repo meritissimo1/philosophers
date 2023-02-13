@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/06 12:07:33 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:42:44 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,4 +106,4 @@ int				thinking(t_philo *philo);
 void		free_thread(t_param param, t_philo *philo,
 			pthread_mutex_t *forks);
 
-#endif 
+#endif

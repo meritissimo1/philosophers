@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 11:00:35 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/03 16:27:37 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/13 16:28:00 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,5 @@ void	*end_dinner(void *phi)
 	philo = (t_philo *)phi;
 	while (!verify(philo))
 		continue ;
-	return (NULL);	
+	return (NULL);
 }

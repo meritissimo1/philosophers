@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 10:25:49 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/10 14:51:31 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/13 15:40:55 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ long int	time_calculator(long int time)
 	long int	act_time;
 
 	act_time = time_converte();
-	//printf("time %ld - %ld act_time == %ld\n", time, act_time, act_time - time);
 	return (act_time - time);
 }
 
@@ -35,7 +34,6 @@ int	time_of_death(long int death_time, long int last_meal)
 
 	action_time = time_converte();
 	
-	//printf("action_time %ld - %ld last_meal == %ld >= %ld death_time -> result %ld\n", action_time, last_meal, action_time - last_meal, death_time, action_time - last_meal);
 	if (last_meal != 0)
 		if (action_time - last_meal >= death_time)
 			return (0);

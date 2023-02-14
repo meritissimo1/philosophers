@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 15:22:03 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/13 16:28:33 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/14 17:20:10 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	init_struct(t_param *param, t_philo *philo)
 	philo->meals = 0;
 	philo->last_meal = 0;
 	philo->satisfied = false;
-	philo->time_eaten = 0;
 	param->is_dead = 0;
 	param->philo_nbr = 0;
 	param->time2die = 0;

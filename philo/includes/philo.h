@@ -6,7 +6,7 @@
 /*   By: marcrodr <marcrodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/19 10:28:40 by marcrodr          #+#    #+#             */
-/*   Updated: 2023/02/13 16:34:56 by marcrodr         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:22:43 by marcrodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ typedef struct s_philo
 	long int		last_meal;
 	int				meals;
 	bool			satisfied;
-	int				time_eaten;
 	pthread_mutex_t	*left_fork;
 	pthread_mutex_t	*right_fork;
 	pthread_mutex_t	*mutex_meals;
